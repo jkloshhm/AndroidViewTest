@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("guojian____oncreate", "oncreate");
         newsBeanList = new ArrayList<NewsBean>();
         progressBar.setVisibility(View.VISIBLE);
-        HttpUtils.getNewsJSON("", handler);
+        HttpUtils.getNewsJSON("tiyu", handler);
         newsAdapter = new NewsAdapter(this, newsBeanList);
         Log.i("guojian____newsBeanList", newsBeanList.toString());
         listViewNews.setAdapter(newsAdapter);

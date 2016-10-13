@@ -63,7 +63,7 @@ public class HttpUtils {
                 String url = "http://v.juhe.cn/toutiao/index";//请求接口地址
                 Map params = new HashMap<String, Object>();//请求参数
                 params.put("key", APPKEY);//应用APPKEY(应用详细页查询)
-                params.put("v", type);//type类型: top(头条，默认),shehui(社会),guonei(国内),
+                params.put("v", "tiyu");//type类型: top(头条，默认),shehui(社会),guonei(国内),
                 // guoji(国际),yule(娱乐), tiyu(体育),
                 //junshi(军事),keji(科技),caijing(财经),shishang(时尚)
                 try {
