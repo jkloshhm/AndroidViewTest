@@ -24,10 +24,10 @@ public class NewsBean {
     private String url;
     private String real_type;
 
-    public NewsBean(String author_name, String date, String real_type, String thumbnail_pic_s, String title, String url) {
+    public NewsBean(String author_name, String date,  String thumbnail_pic_s, String title, String url) {
         this.author_name = author_name;
         this.date = date;
-        this.real_type = real_type;
+
         this.thumbnail_pic_s = thumbnail_pic_s;
         this.title = title;
         this.url = url;
