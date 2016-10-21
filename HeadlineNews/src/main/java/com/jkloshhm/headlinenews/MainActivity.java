@@ -18,7 +18,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class MainActivity extends Activity {
 
     String s = "";
@@ -76,14 +75,7 @@ public class MainActivity extends Activity {
         // guoji(国际),yule(娱乐), tiyu(体育),
         //junshi(军事),keji(科技),caijing(财经),shishang(时尚)
 
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpUtils.getNewsJSON(s, handler);
-                //progressBar.setVisibility(View.GONE);
-            }
-        }).start();
+        HttpUtils.getNewsJSON(s, handler);
 
         newsAdapter = new NewsAdapter(this, newsBeanList);
         Log.i("guojian____newsBeanList", newsBeanList.toString());
@@ -95,10 +87,12 @@ public class MainActivity extends Activity {
                 NewsBean newsBean = newsBeanList.get(position);
                 Intent intent = new Intent(MainActivity.this, BrowseNewsActivity.class);
                 //String author_name, String date, String real_type, String thumbnail_pic_s, String title, String url
+                intent.putExtra("author_name", newsBean.getAuthor_name());
+                intent.putExtra("title", newsBean.getTitle());
                 intent.putExtra("url", newsBean.getUrl());
                 startActivity(intent);
+
             }
         });
     }
-
 }

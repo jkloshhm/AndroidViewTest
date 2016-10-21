@@ -54,36 +54,43 @@ public class HttpUtils {
 
 
     //1.事件列表
-    public static void getNewsJSON(String type, Handler handler) {
+    public static void getNewsJSON(final String type, final Handler handler) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String result = null;
+                String url = "http://v.juhe.cn/toutiao/index";//请求接口地址
+                Map params = new HashMap<String, Object>();//请求参数
+                params.put("key", APPKEY);//应用APPKEY(应用详细页查询)
+                params.put("type", type);//type类型: top(头条，默认),shehui(社会),guonei(国内),
+                // guoji(国际),yule(娱乐), tiyu(体育),
+                //junshi(军事),keji(科技),caijing(财经),shishang(时尚)
 
-        String result = null;
-        String url = "http://v.juhe.cn/toutiao/index";//请求接口地址
-        Map params = new HashMap<String, Object>();//请求参数
-        params.put("key", APPKEY);//应用APPKEY(应用详细页查询)
-        params.put("type", type);//type类型: top(头条，默认),shehui(社会),guonei(国内),
-        // guoji(国际),yule(娱乐), tiyu(体育),
-        //junshi(军事),keji(科技),caijing(财经),shishang(时尚)
-        try {
-            result = net(url, params, "GET");
-            JSONObject object = new JSONObject(result);
-            if (object.getInt("error_code") == 0) {
-                System.out.println(object.get("result"));
-                //JSONObject data = object.get("result");
-                result = object.get("result").toString();
-                JSONObject dataJsonObject = new JSONObject(result);
-                String data = dataJsonObject.getString("data");
-                //Log.i("guojian_data",data);
+                try {
+                    result = net(url, params, "GET");
+                    JSONObject object = new JSONObject(result);
+                    if (object.getInt("error_code") == 0) {
+                        System.out.println(object.get("result"));
+                        //JSONObject data = object.get("result");
+                        result = object.get("result").toString();
+                        JSONObject dataJsonObject = new JSONObject(result);
+                        String data = dataJsonObject.getString("data");
+                        //Log.i("guojian_data",data);
 
-                Message msg = new Message();
-                msg.obj = data;
-                handler.sendMessage(msg);
+                        Message msg = new Message();
+                        msg.obj = data;
+                        handler.sendMessage(msg);
 
-            } else {
-                System.out.println(object.get("error_code") + ":" + object.get("reason"));
+                    } else {
+                        System.out.println(object.get("error_code") + ":" + object.get("reason"));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        }).start();
+
+
     }
 
     /**
