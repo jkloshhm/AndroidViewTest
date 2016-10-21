@@ -1,4 +1,4 @@
-package com.example.cookbook01;
+package com.jkloshhm.headdemo;
 
 import org.junit.Test;
 
