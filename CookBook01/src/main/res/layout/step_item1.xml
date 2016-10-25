@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    android:background="@color/cook_step_title_background_color"
     android:orientation="horizontal"
     android:paddingBottom="10dp"
     android:paddingLeft="25dp"
@@ -14,8 +13,8 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginRight="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginRight="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,15 +57,15 @@
 
     </LinearLayout>
 
-    <!--    <com.example.cookbook01.utils.CircleImageView
-            android:id="@+id/iv_item_step_img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_vertical"
-            android:src="@mipmap/cooking"
-            app:civ_border_color="@color/gray"
-            app:civ_border_width="0dp" />-->
+<!--    <com.example.cookbook01.utils.CircleImageView
+        android:id="@+id/iv_item_step_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/cooking"
+        app:civ_border_color="@color/gray"
+        app:civ_border_width="0dp" />-->
     <ImageView
         android:id="@+id/iv_item_step_img"
         android:layout_width="100dp"

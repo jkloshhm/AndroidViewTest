@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#fd8e7d</color>
-    <color name="colorPrimary1">#fda7c4</color>
-    <color name="colorPrimaryDark">#312d2f</color>
-    <color name="colorAccent">#ffffff</color>
-    <color name="colorAccent2">#ff705a</color>
-    <color name="colorAccent3">#f74682</color>
+    <color name="colorPrimary">#d66113</color>
+    <color name="colorPrimaryDark">#181310</color>
+    <color name="colorAccent">#181310</color>
+<!--<color name="a_colorAccent2">#ff705a</color>
+    <color name="a_colorAccent3">#f74682</color>
+    <color name="a_colorPrimary1">#fda7c4</color>-->
     <color name="white">#ffffff</color>
-    <color name="gray">#55cac9c9</color>
+    <color name="gray">#bbbbbb</color>
+    <color name="red111">#faa395</color>
+    <color name="cook_name">#BB907A</color>
+    <color name="cook_ingredients">#666666</color>
+    <color name="cook_step_title_background_color">#F5EFEB</color>
+    <color name="cook_step_title_background_color_press">#efd4c2</color>
+    <color name="color_cook_item1_gray">#F8F8F8</color>
+    <color name="color_cook_item2_white">#FFFFFF</color>
 
-    <color name="red111">#fd8e7d</color>
 
 </resources>

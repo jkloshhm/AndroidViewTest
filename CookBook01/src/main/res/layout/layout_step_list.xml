@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_webView_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/cook_step_title_background_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_back_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_home"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:id="@+id/bn_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/back3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_step_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清蒸鲤鱼"
+                android:textColor="@color/cook_name"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_home"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:id="@+id/bn_more"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/share3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_step"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

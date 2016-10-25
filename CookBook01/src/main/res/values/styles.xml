@@ -7,9 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!-- AppCompatEditText默认状态状态设置底线颜色 -->
-        <item name="colorControlNormal">#ffffff</item>
-        <!-- AppCompatEditText选择的底线颜色 -->
-        <item name="colorControlActivated">#ffffff</item>
+<!--        <item name="colorControlNormal">#ffffff</item>
+        &lt;!&ndash; AppCompatEditText选择的底线颜色 &ndash;&gt;
+        <item name="colorControlActivated">#ffffff</item>-->
 
     </style>
 

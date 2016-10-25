@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -42,13 +43,14 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     private static StepBean stepBean;
     private static List<CookBean> cookBeanList = new ArrayList<CookBean>();
     private static List<StepBean> stepBeanList = null;
+    private static FrameLayout frameLayoutImage;
     static final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
 
             progressBar.setVisibility(View.GONE);
             listViewCook.setVisibility(View.VISIBLE);
-
+            frameLayoutImage.setVisibility(View.GONE);
             String jsonData = (String) msg.obj;
             try {
                 JSONArray cookJsonArray = new JSONArray(jsonData);
@@ -126,6 +128,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
          getWindow().setStatusBarColor(Color.TRANSPARENT);
          }*/
         linearLayout_search = (LinearLayout) findViewById(R.id.ll_search);
+        frameLayoutImage = (FrameLayout) findViewById(R.id.fl_img_layout);
         //show = (Button) findViewById(R.id.btn_show);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
         listViewCook = (ListView) findViewById(R.id.list_view_cook);
