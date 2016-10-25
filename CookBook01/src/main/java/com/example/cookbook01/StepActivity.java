@@ -77,7 +77,7 @@ public class StepActivity extends Activity {
                 shareIntent.putExtra(Intent.EXTRA_TEXT, "【" + titleString + "】\n主料：" + ingredientsString
                         + "；\n辅料：" + burdenString
                         + "；\n做法：" + step
-                        + "\n(分享来自jkloshhm的cooking)");
+                        + "(分享来自jkloshhm的cooking客户端)");
                 shareIntent.setType("text/plain");
                 startActivity(Intent.createChooser(shareIntent, "分享到"));
             }
