@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.cookbook01.R;
 import com.example.cookbook01.bean.StepBean;
-import com.example.cookbook01.utils.HttpUtils;
+import com.example.cookbook01.utils.ImageLoaderUtil;
 
 import java.util.List;
 
@@ -88,7 +88,7 @@ public class StepAdapter extends BaseAdapter {
             viewHolderOne.stepStepsHolder.setText(stepBean.getStep_text());
             viewHolderOne.step_numberHolder.setText("" + (position + 1));
             String cook_pic_url = stepBean.getStep_img_url();
-            HttpUtils.setPicBitmap(viewHolderOne.stepImgUrlViewHolder, cook_pic_url);
+            ImageLoaderUtil.setPicBitmap2(viewHolderOne.stepImgUrlViewHolder, cook_pic_url);
             convertView = viewOne;
         } else {
             viewTwo = convertView;
@@ -107,7 +107,7 @@ public class StepAdapter extends BaseAdapter {
             holderTwo.stepStepsHolder.setText(stepBean.getStep_text());
             holderTwo.step_numberHolder.setText("" + (position + 1));
             String cook_pic_url = stepBean.getStep_img_url();
-            HttpUtils.setPicBitmap(holderTwo.stepImgUrlViewHolder, cook_pic_url);
+            ImageLoaderUtil.setPicBitmap2(holderTwo.stepImgUrlViewHolder, cook_pic_url);
             convertView = viewTwo;
         }
         return convertView;

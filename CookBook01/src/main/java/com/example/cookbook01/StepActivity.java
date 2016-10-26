@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.example.cookbook01.adapter.StepAdapter;
 import com.example.cookbook01.bean.StepBean;
-import com.example.cookbook01.utils.HttpUtils;
+import com.example.cookbook01.utils.ImageLoaderUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,11 +39,15 @@ public class StepActivity extends Activity {
         linearLayout_share = (LinearLayout) findViewById(R.id.ll_share);
         listView = (ListView) findViewById(R.id.lv_step);
         LayoutInflater mLayoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = mLayoutInflater.inflate(R.layout.layout_step_header, null);
-        ingredients = (TextView) view.findViewById(R.id.tv_step_ingredients);
-        burden = (TextView) view.findViewById(R.id.tv_step_burden);
-        titleImageView = (ImageView) view.findViewById(R.id.iv_step_title);
-        listView.addHeaderView(view);
+        View headerView = mLayoutInflater.inflate(R.layout.layout_step_header, null);
+        ingredients = (TextView) headerView.findViewById(R.id.tv_step_ingredients);
+        burden = (TextView) headerView.findViewById(R.id.tv_step_burden);
+        titleImageView = (ImageView) headerView.findViewById(R.id.iv_step_title);
+        //listView.addHeaderView(view);
+        listView.addHeaderView(headerView ,null,false);
+        headerView.setEnabled(false);
+
+
         final String titleString = getIntent().getStringExtra("title");
         final String ingredientsString = getIntent().getStringExtra("ingredients");
         final String burdenString = getIntent().getStringExtra("burden");
@@ -51,7 +55,7 @@ public class StepActivity extends Activity {
         title.setText(titleString);
         ingredients.setText(ingredientsString);
         burden.setText(burdenString);
-        HttpUtils.setPicBitmap(titleImageView, imgUrlString);
+        ImageLoaderUtil.setPicBitmap2(titleImageView, imgUrlString);
 
         stepBeanList = (List<StepBean>) getIntent().getSerializableExtra("stepBeanList");
         stepAdapter = new StepAdapter(this, stepBeanList);

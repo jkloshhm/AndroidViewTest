@@ -12,19 +12,19 @@
         android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingBottom="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
         android:visibility="visible">
 
         <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center">
 
             <com.example.cookbook01.utils.CircleImageView
                 android:id="@+id/iv_step_title"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_centerInParent="true"
                 android:src="@mipmap/cooking"
                 app:civ_border_color="@color/gray"
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
 
@@ -60,7 +60,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@mipmap/img_ingredients" />
+                        android:src="@mipmap/img_ingredient" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@mipmap/img_ingredients" />
+                        android:src="@mipmap/img_burden" />
 
                     <TextView
                         android:layout_width="wrap_content"

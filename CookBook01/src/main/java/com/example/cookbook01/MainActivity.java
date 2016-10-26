@@ -23,7 +23,10 @@ import android.widget.Toast;
 import com.example.cookbook01.adapter.CookAdapter;
 import com.example.cookbook01.bean.CookBean;
 import com.example.cookbook01.bean.StepBean;
+import com.example.cookbook01.utils.ConnectionUtil;
 import com.example.cookbook01.utils.HttpUtils;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -35,6 +38,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
+
 
     public static final String APPKEY = "450725a76d063fd1262f95e22939964b";//配置您申请的KEY
     private static ProgressBar progressBar;
@@ -79,12 +83,14 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
             }
         }
     };
+
     private LinearLayout linearLayout_search;
     private EditText name;
     private Button show;
+    private ImageLoader imageLoader = ImageLoader.getInstance();
 
     //1.获取菜谱大全的JSON数据
-    public static void getCookJSON(String name) {
+    public static void getCookJSON(String name, Context context) {
         //String title = null, steps = null, albumsJsonArrayString = null;
         String result = null;
         String url = "http://apis.juhe.cn/cook/query.php";//请求接口地址
@@ -96,7 +102,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         params.put("rn", "");//数据返回条数，最大30
         params.put("albums", "");//albums字段类型，1字符串，默认数组
         try {
-            result = HttpUtils.net(url, params, "GET");
+
+            result = HttpUtils.net(url, params, "GET", context);
             Log.i("result", result);
             JSONObject object = new JSONObject(result);
             if (object.getInt("error_code") == 0) {
@@ -134,27 +141,46 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         listViewCook = (ListView) findViewById(R.id.list_view_cook);
         name = (EditText) findViewById(R.id.name);
         name.setHintTextColor(getResources().getColor(R.color.gray));
+        if(! ConnectionUtil.isConnectingToInternet(MainActivity.this)){
+            ConnectionUtil.setNetworkMethod(MainActivity.this);
+            Toast.makeText(MainActivity.this,
+                    "亲，网络连了么？", Toast.LENGTH_LONG)
+                    .show();
+        }
+
         linearLayout_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
                 if (TextUtils.isEmpty(name.getText().toString().trim())) {
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(MainActivity.this, "请输入正确的菜名", Toast.LENGTH_SHORT).show();
                 } else {
                     progressBar.setVisibility(View.VISIBLE);
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            getCookJSON(name.getText().toString());
-                        }
-                    }).start();
+                    //getCookJSON(name.getText().toString());
+                    if(ConnectionUtil.isConnectingToInternet(MainActivity.this)){
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                getCookJSON(name.getText().toString(),MainActivity.this);
+                            }
+                        }).start();
+
+                    }else {
+                        progressBar.setVisibility(View.GONE);
+                        ConnectionUtil.setNetworkMethod(MainActivity.this);
+                        //Toast.makeText(MainActivity.this, "亲，网络连了么？", Toast.LENGTH_LONG).show();
+                    }
+
                 }
             }
         });
         adapter = new CookAdapter(this, cookBeanList);
         listViewCook.setAdapter(adapter);
+        listViewCook.setOnScrollListener(new PauseOnScrollListener(imageLoader,true,true));
         listViewCook.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

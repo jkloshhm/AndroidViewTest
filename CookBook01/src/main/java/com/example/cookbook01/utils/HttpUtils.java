@@ -1,8 +1,8 @@
 package com.example.cookbook01.utils;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.widget.ImageView;
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -20,10 +20,11 @@ import java.util.Map;
  */
 public class HttpUtils {
     public static final String DEF_CHATSET = "UTF-8";
-    public static final int DEF_CONN_TIMEOUT = 30000;
-    public static final int DEF_READ_TIMEOUT = 30000;
+    public static final int DEF_CONN_TIMEOUT = 10000;
+    public static final int DEF_READ_TIMEOUT = 10000;
     public static String userAgent = "Mozilla/5.0 (Windows NT 6.1) " +
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36";
+
 
     /**
      * @param strUrl 请求地址
@@ -32,7 +33,7 @@ public class HttpUtils {
      * @return 网络请求字符串
      * @throws Exception
      */
-    public static String net(String strUrl, Map params, String method) throws Exception {
+    public static String net(String strUrl, Map params, String method,Context context) throws Exception {
         HttpURLConnection conn = null;
         BufferedReader reader = null;
         String rs = null;
@@ -50,17 +51,26 @@ public class HttpUtils {
                 conn.setDoOutput(true);
             }
             conn.setRequestProperty("User-agent", userAgent);
-            conn.setUseCaches(false);
+            conn.setUseCaches(true);
             conn.setConnectTimeout(DEF_CONN_TIMEOUT);
             conn.setReadTimeout(DEF_READ_TIMEOUT);
             conn.setInstanceFollowRedirects(false);
+
+            if (conn.getResponseCode() == 200) {
+                // 获取返回的数据
+                //String result = streamToString(urlConn.getInputStream());
+                Log.e("getguojian", "Get方式请求成功，result--->" );
+            } else {
+                Log.e("getguojian", "Get方式请求失败");
+                Toast.makeText(context, "亲，网络请求失败,请检查网络...", Toast.LENGTH_LONG) .show();
+            }
             conn.connect();
             if (params != null && method.equals("POST")) {
                 try {
                     DataOutputStream out = new DataOutputStream(conn.getOutputStream());
                     out.writeBytes(urlencode(params));
                 } catch (Exception e) {
-                    // TODO: handle exception
+
                 }
             }
             InputStream is = conn.getInputStream();
@@ -96,22 +106,4 @@ public class HttpUtils {
         return sb.toString();
     }
 
-    public static void setPicBitmap(final ImageView ivPic, final String pic_url) {
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    HttpURLConnection conn = (HttpURLConnection) new URL(pic_url).openConnection();
-                    conn.connect();
-                    InputStream is = conn.getInputStream();
-                    Bitmap bitmap = BitmapFactory.decodeStream(is);
-                    ivPic.setImageBitmap(bitmap);
-                    is.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
 }

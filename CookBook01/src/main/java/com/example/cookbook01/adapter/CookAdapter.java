@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.cookbook01.R;
 import com.example.cookbook01.bean.CookBean;
-import com.example.cookbook01.utils.HttpUtils;
+import com.example.cookbook01.utils.ImageLoaderUtil;
 
 import java.util.List;
 
@@ -103,7 +103,7 @@ public class CookAdapter extends BaseAdapter {
             holderFirst.cookBurdenHolder.setText("辅料: " + cookBean.getBurden());
             //imgUrl.setText(cookStepBean.getStepimg_url());
             String cook_pic_url = cookBean.getImg_url();
-            HttpUtils.setPicBitmap(holderFirst.imageViewHolder, cook_pic_url);
+            ImageLoaderUtil.setPicBitmap2(holderFirst.imageViewHolder, cook_pic_url);
             convertView=firstItemView;
 
         }else {
@@ -131,7 +131,7 @@ public class CookAdapter extends BaseAdapter {
             holder.cookBurdenHolder.setText("辅料: " + cookBean.getBurden());
             //imgUrl.setText(cookStepBean.getStepimg_url());
             String cook_pic_url = cookBean.getImg_url();
-            HttpUtils.setPicBitmap(holder.imageViewHolder, cook_pic_url);
+            ImageLoaderUtil.setPicBitmap2(holder.imageViewHolder, cook_pic_url);
             convertView = othersItemView;
         }
 

@@ -25,7 +25,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@mipmap/img_ingredients" />
+                android:src="@mipmap/img_step" />
             <TextView
                 android:layout_marginLeft="2dp"
                 android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
 
     </LinearLayout>
 
-<!--    <com.example.cookbook01.utils.CircleImageView
+    <com.example.cookbook01.utils.CircleImageView
         android:id="@+id/iv_item_step_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -65,11 +65,11 @@
         android:layout_gravity="center_vertical"
         android:src="@mipmap/cooking"
         app:civ_border_color="@color/gray"
-        app:civ_border_width="0dp" />-->
-    <ImageView
+        app:civ_border_width="0dp" />
+<!--    <ImageView
         android:id="@+id/iv_item_step_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_vertical"
-        android:src="@mipmap/cooking" />
+        android:src="@mipmap/cooking" />-->
 </LinearLayout>
