@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cookdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:name="com.alibaba.apigateway.appKey" android:value="23495613" />
+        <meta-data android:name="com.alibaba.apigateway.appSecret" android:value="c26f88a392275100e8649faea8b641ce" />
+        <!--<meta-data android:name="com.alibaba.apigateway.appKey" android:value="23495491" />
+        <meta-data android:name="com.alibaba.apigateway.appSecret" android:value="09c331097b911f379ad9bfb3c1ffe568" />-->
+
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
