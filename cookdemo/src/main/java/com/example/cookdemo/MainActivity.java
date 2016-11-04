@@ -1,173 +1,189 @@
 package com.example.cookdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alibaba.apigateway.ApiInvokeException;
-import com.alibaba.apigateway.ApiRequest;
-import com.alibaba.apigateway.ApiResponse;
-import com.alibaba.apigateway.ApiResponseCallback;
 import com.alibaba.apigateway.client.ApiGatewayClient;
-import com.alibaba.apigateway.enums.HttpMethod;
-import com.alibaba.apigateway.service.RpcService;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    private static TextView textView;
+    private static ParentClassBean parentClassBean;
+    private static ChildrenClassBean childrenClassBean;
+    private static List<ParentClassBean> parentClassBeenList;
+    private static List<ChildrenClassBean> childrenClassBeenList;
     private String TAG = "guojian_CookDemo";
-    Handler handler = new Handler(){
+    private Button mButtonSearch, mButtonClass;
+    private ListView mListViewParent, mListViewChildren;
+    private ParentClassAdapter parentClassAdapter;
+    final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            String jsonData = (String) msg.obj;
-            //Log.i(TAG,"data===="+jsonData);
-            if(jsonData != null){
-                try {
-                    JSONObject dataJsonObject =  new JSONObject(jsonData);
-                    String result = dataJsonObject.getString("result");
-                    String list = new JSONObject(result).getString("list");
-                    JSONObject lisJsonObject = new JSONObject(list);
-                    String name = lisJsonObject.getString("name");
-                    //String
-                    //textView.setText(name);
-                }catch (Exception e){
-                    e.printStackTrace();
+            Bundle jsonBundle = msg.getData();
+            String classType = jsonBundle.getString("classType");
+            String jsonErrorMessage = jsonBundle.getString("errorMessage");
+            String jsonData = jsonBundle.getString("stringBody");
+            Log.i(TAG, "--------->>jsonData====" + jsonData);
+            Log.i(TAG, "--------->>jsonErrorMessage====" + jsonErrorMessage);
+            if (jsonData != null && jsonErrorMessage == null) {
+                if (classType != null && classType.equals("GetDataBySearchName")) {//按名称搜索菜谱
+                    try {
+                        JSONObject dataJsonObject = new JSONObject(jsonData);
+                        String result = dataJsonObject.getString("result");
+                        String list = new JSONObject(result).getString("list");
+                        JSONArray listJsonArray = new JSONArray(list);
+                        //for (int i = 0; i < listJsonArray.length();i++);
+                        JSONObject lisJsonObject = listJsonArray.getJSONObject(0);
+                        String name = lisJsonObject.getString("name");
+                        //textView.setText(jsonData);
+                        //textView.setText(name);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else if (classType != null && classType.equals("GetDataClass")) {//分类名称
+                    try {
+                        JSONObject dataJsonObject = new JSONObject(jsonData);
+                        String result = dataJsonObject.getString("result");
+                        /*String list = new JSONObject(result).getString("list");*/
+                        JSONArray resultJsonArray = new JSONArray(result);
+                        StringBuffer s = new StringBuffer();
+                        //parentClassBeenList = new ArrayList<ParentClassBean>();
+                        //parentClassBeenList.clear();
+                        for (int i = 0; i < resultJsonArray.length(); i++) {
+                            JSONObject resultJsonObject = resultJsonArray.getJSONObject(i);
+                            String classId_parent = resultJsonObject.getString("classid");
+                            String className_parent = resultJsonObject.getString("name");
+                            String parentId_parent = resultJsonObject.getString("parentid");
+                            JSONArray list_parent = resultJsonObject.getJSONArray("list");
+
+                            childrenClassBeenList = new ArrayList<>();
+                            for (int j = 0; j < list_parent.length(); j++) {
+                                JSONObject list_children = list_parent.getJSONObject(j);
+                                childrenClassBean = new ChildrenClassBean(
+                                        list_children.getString("classid"),
+                                        list_children.getString("name"),
+                                        list_children.getString("parentid"));
+                                childrenClassBeenList.add(childrenClassBean);
+                                Log.i(TAG, "name=========" + list_children.getString("name"));
+                            }
+                            // public ParentClassBean(List<ChildrenClassBean> childrenClassBeen,
+                            // String parentClassId, String parentClassName, String parentParentId)
+                            parentClassBean = new ParentClassBean(
+                                    childrenClassBeenList,
+                                    classId_parent,
+                                    className_parent,
+                                    parentId_parent);
+                            parentClassBeenList.add(parentClassBean);
+                            s.append(classId_parent + "-" +
+                                    className_parent + "-" +
+                                    parentId_parent + "\n");
+
+                        }
+                        Log.i(TAG, "S=" + s);
+                        //JSONObject lisJsonObject = listJsonArray.getJSONObject(0);
+                        //String name = lisJsonObject.getString("name");
+                        //String
+                        //textView.setText(s);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else if (classType != null && classType.equals("GetDataByClassId")) {//分类名称ID
+                    try {
+                        /*JSONObject dataJsonObject = new JSONObject(jsonData);
+                        String result = dataJsonObject.getString("result");
+                        String list = new JSONObject(result).getString("list");
+                        JSONArray listJsonArray = new JSONArray(list);
+                        //for (int i = 0; i < listJsonArray.length();i++);
+                        JSONObject lisJsonObject = listJsonArray.getJSONObject(0);
+                        String name = lisJsonObject.getString("name");*/
+                        //String
+                        textView.setText(jsonData);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }
-            System.out.print(jsonData);
-            textView.setText(jsonData);
-
+            mListViewParent.setAdapter(parentClassAdapter);
+            //System.out.print(jsonData);
+            //textView.setText(jsonData);
         }
     };
+    private ChildrenClassAdapter childrenClassAdapter;
 
-    private Button button;
-    private static TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 初始化API网关SDK
         initGatewaySdk();
         setContentView(R.layout.activity_main);
-
-
-        button =(Button) findViewById(R.id.search);
-        textView = (TextView) findViewById(R.id.text_show);
-        if (button != null){
-            button.setOnClickListener(new View.OnClickListener() {
+        mListViewParent = (ListView) findViewById(R.id.lv_parent_class);
+        mListViewChildren = (ListView) findViewById(R.id.lv_children_class);
+        mButtonSearch = (Button) findViewById(R.id.search);
+        //textView = (TextView) findViewById(R.id.text_show);
+        if (mButtonSearch != null) {
+            mButtonSearch.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity.this,"搜索菜谱",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "搜索菜谱", Toast.LENGTH_LONG).show();
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            GatData1();
+                            GetJsonUtils.GetDataClass(handler);
                         }
                     }).start();
                 }
             });
         }
+        parentClassBeenList = new ArrayList<>();
+        parentClassAdapter = new ParentClassAdapter(this, parentClassBeenList);
+        //mListViewChildren.setAdapter(parentClassAdapter);
+        mListViewParent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ParentClassBean parentClassBean1 = parentClassBeenList.get(position);
+                childrenClassBeenList = parentClassBean1.getChildrenClassBeen();
+                childrenClassAdapter = new ChildrenClassAdapter(childrenClassBeenList,
+                        MainActivity.this);
+                mListViewChildren.setAdapter(childrenClassAdapter);
+            }
+        });
+
+        mListViewChildren.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ChildrenClassBean childrenClassBean1 = childrenClassBeenList.get(position);
+                String classId = childrenClassBean1.getChildrenClassId();
+                Intent intent = new Intent();
+
+            }
+        });
+
     }
+
+    /*public class  MyParentItemClickListener extends AdapterView.OnItemClickListener{
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        }
+    } */
     private void initGatewaySdk() {
         // 初始化API网关
         ApiGatewayClient.init(getApplicationContext(), false);
     }
 
-    private void GatData1() {
-        // 获取服务
-        RpcService rpcService = ApiGatewayClient.getRpcService();
-        final ApiRequest apiRequest = new ApiRequest();
-        // 设置请求地址、Path及Method
-        //apiRequest.setAddress("https://dm-51.data.aliyun.com");
-        //apiRequest.setPath("/rest/160601/ocr/ocr_idcard.json");
-        apiRequest.setAddress("http://jisusrecipe.market.alicloudapi.com");//http://jisusrecipe.market.alicloudapi.com/recipe/search
-        apiRequest.setPath("/recipe/search");
-        apiRequest.setMethod(HttpMethod.GET);
-        apiRequest.addQuery("keyword", "红烧肉");
-        apiRequest.addQuery("num", "5");
-        // 按照文档设置二进制形式Body，支持设置Query参数、Header参数、Form形式Body
-        //apiRequest.setStringBody("JSON格式参数");
-        // 设置支持自签等形式的证书，如果服务端证书合法请勿设置该值，仅在开发测试或者非常规场景下设置。
-        apiRequest.setTrustServerCertificate(true);
-        // 设置超时
-        apiRequest.setTimeout(10000);
-        rpcService.call(apiRequest, new ApiResponseCallback() {
-            @Override
-            public void onSuccess(ApiResponse apiResponse) {
-                    // 处理apiResponse
-                try {
-                    // ApiResponse apiResponse = rpcService.call(apiRequest);
-                    // 处理apiResponse，以下为常用方法
-                    // RequestId
-                    // apiResponse.getRequestId();
-                    // Code
-                    // apiResponse.getCode();
-                    // ErrorMessage
-                    String e= apiResponse.getErrorMessage();
-                    // Response Content
-                    String s = null;
-                    s =apiResponse.getStringBody();
-                    //Log.i(TAG,"data===="+s);
-                    Message msg = new Message();
-                    msg.obj = s;
-                    handler.sendMessage(msg);
-                    // Response Headers
-                    // apiResponse.getHeaders();
-                } catch (Exception e) {
-                    // 处理异常
-                }
-            }
-            @Override
-            public void onException(ApiInvokeException e) {
-                // 处理异常
-                Toast.makeText(MainActivity.this,"请求数据失败...",Toast.LENGTH_LONG).show();
-
-            }
-        });
-    }
-    private void GatData2() {
-
-        // 获取服务
-        RpcService rpcService = ApiGatewayClient.getRpcService();
-        ApiRequest apiRequest = new ApiRequest();
-        // 设置请求地址、Path及Method
-        apiRequest.setAddress("http://jisusrecipe.market.alicloudapi.com");//http://jisusrecipe.market.alicloudapi.com/recipe/search
-        apiRequest.setPath("/recipe/search");
-        apiRequest.setMethod(HttpMethod.GET);
-        // 按照文档设置Query参数，支持设置Header参数、Form形式Body及二进制形式Body
-        apiRequest.addQuery("keyword", "红烧肉");
-        apiRequest.addQuery("num", "2");
-        //apiRequest.addQuery("SignName", "demo");
-        //apiRequest.addQuery("TemplateCode", "demo");
-        // 设置超时时间及其他
-        apiRequest.setTimeout(3000);
-        try {
-            ApiResponse apiResponse = rpcService.call(apiRequest);
-            // 处理apiResponse，以下为常用方法
-            // RequestId
-            // apiResponse.getRequestId();
-            // Code
-            // apiResponse.getCode();
-            // ErrorMessage
-            String e= apiResponse.getErrorMessage();
-            // Response Content
-            String s = null;
-            s =apiResponse.getStringBody();
-            Log.i(TAG,"data===="+s);
-
-            Message msg = new Message();
-            msg.obj = s;
-            handler.sendMessage(msg);
-            // Response Headers
-            // apiResponse.getHeaders();
-        } catch (ApiInvokeException e) {
-            // 处理异常
-        }
-    }
 }

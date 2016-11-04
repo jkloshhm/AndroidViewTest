@@ -12,17 +12,36 @@
 
     <Button
         android:id="@+id/search"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="搜索"/>
-    <ScrollView
+        android:text="分类搜索"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/text_show"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World!" />
-    </ScrollView>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:background="@color/color_gray1">
+            <ListView
+                android:id="@+id/lv_parent_class"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@color/color_gray2">
+            <ListView
+                android:id="@+id/lv_children_class"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
