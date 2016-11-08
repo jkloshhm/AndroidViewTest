@@ -1,4 +1,4 @@
-package com.example.administrator.wechat;
+package com.example.headdemotest;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
