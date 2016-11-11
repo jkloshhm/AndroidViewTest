@@ -44,7 +44,7 @@ public class ChildrenClassAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.layout_children_class_list_item, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.children_class_adapter_item, null);
             holder = new ViewHolder();
             holder.textView = (TextView) convertView.findViewById(R.id.tv_children_item);
             convertView.setTag(holder);

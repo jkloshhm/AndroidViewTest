@@ -31,6 +31,11 @@ public class MainActivity extends FragmentActivity {
         initView();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
     private void initView() {
         /**
          * RadioGroup部分
@@ -59,7 +64,7 @@ public class MainActivity extends FragmentActivity {
                         viewPager.setCurrentItem(2, true);
                         break;*/
                     case R.id.rb_me:
-                        viewPager.setCurrentItem(3, true);
+                        viewPager.setCurrentItem(2, true);
                         break;
                 }
             }

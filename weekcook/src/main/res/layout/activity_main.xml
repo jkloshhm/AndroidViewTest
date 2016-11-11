@@ -14,7 +14,7 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="55dp"
         android:background="@color/gray_mean_background"
         android:orientation="horizontal">
 

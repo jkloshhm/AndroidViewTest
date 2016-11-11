@@ -1,7 +1,7 @@
 package com.example.guojian.weekcook.fragment;
 
-
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,10 +13,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.guojian.weekcook.R;
+import com.example.guojian.weekcook.activity.ClassListActivity;
 import com.example.guojian.weekcook.adapter.ChildrenClassAdapter;
 import com.example.guojian.weekcook.adapter.ParentClassAdapter;
 import com.example.guojian.weekcook.bean.ChildrenClassBean;
@@ -29,20 +28,21 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ClassFragment extends Fragment {
-    private static TextView textView;
+    //private static TextView textView;
     private static ParentClassBean parentClassBean;
     private static ChildrenClassBean childrenClassBean;
     private static List<ParentClassBean> parentClassBeenList;
     private static List<ChildrenClassBean> childrenClassBeenList;
+    private static Context context;
     private String TAG = "guojian_CookDemo";
     private Button mButtonSearch, mButtonClass;
     private ListView mListViewParent, mListViewChildren;
     private ParentClassAdapter parentClassAdapter;
+    private ChildrenClassAdapter childrenClassAdapter;
     final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -71,18 +71,14 @@ public class ClassFragment extends Fragment {
                     try {
                         JSONObject dataJsonObject = new JSONObject(jsonData);
                         String result = dataJsonObject.getString("result");
-                        /*String list = new JSONObject(result).getString("list");*/
                         JSONArray resultJsonArray = new JSONArray(result);
                         StringBuffer s = new StringBuffer();
-                        //parentClassBeenList = new ArrayList<ParentClassBean>();
-                        //parentClassBeenList.clear();
                         for (int i = 0; i < resultJsonArray.length(); i++) {
                             JSONObject resultJsonObject = resultJsonArray.getJSONObject(i);
                             String classId_parent = resultJsonObject.getString("classid");
                             String className_parent = resultJsonObject.getString("name");
                             String parentId_parent = resultJsonObject.getString("parentid");
                             JSONArray list_parent = resultJsonObject.getJSONArray("list");
-
                             childrenClassBeenList = new ArrayList<>();
                             for (int j = 0; j < list_parent.length(); j++) {
                                 JSONObject list_children = list_parent.getJSONObject(j);
@@ -93,8 +89,6 @@ public class ClassFragment extends Fragment {
                                 childrenClassBeenList.add(childrenClassBean);
                                 Log.i(TAG, "name=========" + list_children.getString("name"));
                             }
-                            // public ParentClassBean(List<ChildrenClassBean> childrenClassBeen,
-                            // String parentClassId, String parentClassName, String parentParentId)
                             parentClassBean = new ParentClassBean(
                                     childrenClassBeenList,
                                     classId_parent,
@@ -104,13 +98,8 @@ public class ClassFragment extends Fragment {
                             s.append(classId_parent + "-" +
                                     className_parent + "-" +
                                     parentId_parent + "\n");
-
                         }
                         Log.i(TAG, "S=" + s);
-                        //JSONObject lisJsonObject = listJsonArray.getJSONObject(0);
-                        //String name = lisJsonObject.getString("name");
-                        //String
-                        //textView.setText(s);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -123,77 +112,64 @@ public class ClassFragment extends Fragment {
                         //for (int i = 0; i < listJsonArray.length();i++);
                         JSONObject lisJsonObject = listJsonArray.getJSONObject(0);
                         String name = lisJsonObject.getString("name");*/
-                        //String
-                        textView.setText(jsonData);
+                        //textView.setText(jsonData);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
-
             }
             mListViewParent.setAdapter(parentClassAdapter);
-            //System.out.print(jsonData);
-            //textView.setText(jsonData);
+            initChildrenView(0);
         }
     };
-    private ChildrenClassAdapter childrenClassAdapter;
 
     public ClassFragment() {
         // Required empty public constructor
     }
 
-    private static Context context;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         context = getActivity();
         // Inflate the layout for this fragment
         View mClassView = inflater.inflate(R.layout.fragment_class, container, false);
 
         mListViewParent = (ListView) mClassView.findViewById(R.id.lv_parent_class);
         mListViewChildren = (ListView) mClassView.findViewById(R.id.lv_children_class);
-        mButtonSearch = (Button) mClassView.findViewById(R.id.search);
-        //textView = (TextView) findViewById(R.id.text_show);
-        if (mButtonSearch != null) {
-            mButtonSearch.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(context, "搜索菜谱", Toast.LENGTH_LONG).show();
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            GetJsonUtils.GetDataClass(handler);
-                        }
-                    }).start();
-                }
-            });
-        }
         parentClassBeenList = new ArrayList<>();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                GetJsonUtils.GetDataClass(handler);
+            }
+        }).start();
         parentClassAdapter = new ParentClassAdapter(context, parentClassBeenList);
-        //mListViewChildren.setAdapter(parentClassAdapter);
+
         mListViewParent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ParentClassBean parentClassBean1 = parentClassBeenList.get(position);
-                childrenClassBeenList = parentClassBean1.getChildrenClassBeen();
-                childrenClassAdapter = new ChildrenClassAdapter(childrenClassBeenList,
-                        context);
-                mListViewChildren.setAdapter(childrenClassAdapter);
+                initChildrenView(position);
             }
         });
-
-        /*mListViewChildren.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListViewChildren.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ChildrenClassBean childrenClassBean1 = childrenClassBeenList.get(position);
                 String classId = childrenClassBean1.getChildrenClassId();
-                Intent intent = new Intent(MainActivity.this,CookListActivity.class);
+                Intent intent = new Intent(context,ClassListActivity.class);
                 intent.putExtra("classId",classId);
                 startActivity(intent);
-
             }
-        });*/
+        });
         return mClassView;
+    }
+
+    public void initChildrenView(int position) {
+        ParentClassBean parentClassBean1 = parentClassBeenList.get(position);
+        childrenClassBeenList = parentClassBean1.getChildrenClassBeen();
+        childrenClassAdapter = new ChildrenClassAdapter(childrenClassBeenList, context);
+        mListViewChildren.setAdapter(childrenClassAdapter);
+        parentClassAdapter.setSelectItem(position);
+        parentClassAdapter.notifyDataSetInvalidated();
     }
 
 
