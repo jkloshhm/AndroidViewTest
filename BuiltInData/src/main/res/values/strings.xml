@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BuiltInData</string>
+    <!-- Switch Name -->
+    <string name="switch_menu">Switch Menu</string>
+    <string name="switch_animation">Animation</string>
+    <string name="switch_model">Model</string>
+    <string name="switch_rom">Rom</string>
+    <string name="switch_ram">Ram</string>
+    <string name="switch_single">Single</string>
+    <string name="switch_platform">Platform</string>
+</resources>
