@@ -1,0 +1,294 @@
+[
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather30.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather30.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/storm_d.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/storm_d.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather36.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather36.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather44.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather44.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/wind_bg.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/wind_bg.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/clear_n.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/clear_n.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather13.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather13.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_item_delete.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/ic_item_delete.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather3.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather3.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather21.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather21.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather43.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather43.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cloudy_d.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/cloudy_d.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather19.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather19.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather27.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather27.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather35.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather35.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather9.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather9.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather2.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather2.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rain_d.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/rain_d.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather5.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather5.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather8.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather8.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather0.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather0.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather17.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather17.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather11.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather11.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather28.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather28.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather25.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather25.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_dl_green_m.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/ic_dl_green_m.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/foggy_d.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/foggy_d.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather14.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather14.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather22.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather22.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cloudy_n.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/cloudy_n.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather33.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather33.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather41.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather41.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather16.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather16.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/left_layout_bg.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/left_layout_bg.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather39.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather39.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather10.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather10.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/bg14_day_snow.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/bg14_day_snow.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather47.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather47.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/cityadd_bg.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/cityadd_bg.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/homep_titlemenu_normal.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/homep_titlemenu_normal.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/snow_n.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/snow_n.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather38.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather38.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather6.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather6.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather32.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather32.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather24.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather24.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather46.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather46.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/storm_n.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/storm_n.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather29.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather29.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/mohuxiao.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/mohuxiao.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather15.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather15.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather23.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather23.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/clear_d.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/clear_d.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather40.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather40.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather12.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather12.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather20.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather20.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather34.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather34.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather37.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather37.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather31.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather31.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/snow_d.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/snow_d.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/sunny_bg.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/sunny_bg.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather26.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather26.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather18.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather18.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather42.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather42.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/ic_launcher.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather45.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather45.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/zmohubg.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/zmohubg.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/foggy_n.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/foggy_n.jpg"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/homep_title_refresh.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/homep_title_refresh.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather7.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather7.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/search.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/search.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather1.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather1.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/weather4.png",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/weather4.png"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable-xhdpi-v4/rain_n.jpg",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable-xhdpi/rain_n.jpg"
+    }
+]

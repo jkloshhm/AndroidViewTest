@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/gridview_citymanager.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/gridview_citymanager.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/showforecast.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/showforecast.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/lianchart.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/lianchart.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/weatherwidget.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/weatherwidget.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/citymanager.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/citymanager.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/welcomeactivity.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/welcomeactivity.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/emptylayout.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/emptylayout.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/gridviewitemlayout.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/gridviewitemlayout.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/item_gridview_citymanager.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/item_gridview_citymanager.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/sidedelete2.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/sidedelete2.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/sidedelete1.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/sidedelete1.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/cityitem.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/cityitem.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/sidelistviewitem.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/sidelistviewitem.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/searchcity.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/searchcity.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/viewpateitem.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/viewpateitem.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/exitapp_dialog.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/exitapp_dialog.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/viewpagelayout.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/viewpagelayout.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/layout/loadactivity.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/layout/loadactivity.xml"
+    }
+]

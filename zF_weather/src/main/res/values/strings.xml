@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZF_weather</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="weather">Not connected</string>
+    <string name="location">New York </string>
+    <string name="date">October 25th  Tuesday</string>
+    <string name="temp">16</string>
+    <string name="textweather">Partly Cloudycode</string>
+    <string name="skycell">Skycell Weather</string>
+    <string name="search_info">Input City,PostCode,Airport</string>
+    <string name="cancel">Cancel</string>
+    <string name="addcity">City manager</string>
+    <string name="lifeindex">Add city</string>
+    <string name="changetheski">Show Weather</string>
+    <string name="shareapplication">Sharing application</string>
+    <string name="exit">Exit</string>
+    <string name="delete">X</string>
+    <string name="default1">Set Default</string>
+    <string name="default2">Default</string>
+    <string name="delete2">delete</string>
+    <string name="goodweather">What a nice day</string>
+    <string name="goodmood">Good mood</string>
+    <string name="sunset">sunset: 4:55 pm</string>
+    <string name="sunraise">sunrise: 6:23 am</string>
+    <string name="dayweather">Mostly Cloudy</string>
+    <string name="temphightolow">9℃ ~16℃</string>
+    <string name="nengjiandu">visibility: 25.91 Km</string>
+</resources>

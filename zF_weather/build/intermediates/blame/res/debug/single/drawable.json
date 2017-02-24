@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/item_citym_normal_bg.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/item_citym_normal_bg.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/homep_titlebt_bg.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/homep_titlebt_bg.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/exitapp_text_bg.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/exitapp_text_bg.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/drawable.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/drawable.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/drawerlayout_button_bg.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/drawerlayout_button_bg.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/citym_normal_color.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/citym_normal_color.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/drawerlayout_bt_bg.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/drawerlayout_bt_bg.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/item_citym_normal_color.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/item_citym_normal_color.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/search_bg_shape.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/search_bg_shape.xml"
+    },
+    {
+        "merged": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/build/intermediates/res/merged/debug/drawable/citym_normal_bg.xml",
+        "source": "/home/guojian/AndroidStudioProjects/AndroidViewTest/zF_weather/src/main/res/drawable/citym_normal_bg.xml"
+    }
+]

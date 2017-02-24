@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_layout_bg"
+    android:id="@+id/relativelayout"
+    >
+
+   <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp"
+        android:textColor="#ffffff"/>  
+
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/homep_titlemenu_normal" />
+
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/homep_titlebt_bg"
+        android:onClick="onClick"
+        android:src="@drawable/homep_title_refresh" />
+    
+    
+    
+     
+    
+ 
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:layout_below="@+id/location"  
+        android:layout_marginTop="45dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/daytemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_below="@+id/refresh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        
+        android:textSize="30dp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/dayweather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/location"
+       
+        android:textColor="#ffffff"
+        android:textSize="20dp" />   
+
+</RelativeLayout>
